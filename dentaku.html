@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>電卓</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 現在の金額を上部に移動 -->
+    <div class="current-amount">
+        現在の金額: <span id="current-amount">0</span> 円
+    </div>
+
+    <div class="main-container">
+        <div class="calculator-container">
+            <div class="calculator">
+                <input type="text" class="calculator-screen" value="" disabled />
+
+                <div class="calculator-buttons">
+                    <button class="btn clear" value="clear">C</button>
+                    <button class="btn backspace" value="backspace">←</button>
+                    <button class="btn operator" value="/">÷</button>
+                    <button class="btn operator" value="*">×</button>
+
+                    <button class="btn" value="7">7</button>
+                    <button class="btn" value="8">8</button>
+                    <button class="btn" value="9">9</button>
+                    <button class="btn operator" value="-">−</button>
+
+                    <button class="btn" value="4">4</button>
+                    <button class="btn" value="5">5</button>
+                    <button class="btn" value="6">6</button>
+                    <button class="btn operator" value="+">＋</button>
+
+                    <button class="btn" value="1">1</button>
+                    <button class="btn" value="2">2</button>
+                    <button class="btn" value="3">3</button>
+                    <button class="btn equal-sign" value="=">=</button>
+
+                    <!-- 最下段に0と00を配置 -->
+                    <button class="btn zero" value="0">0</button>
+                    <button class="btn double-zero" value="00">00</button>
+                </div>
+
+                <!-- 金額ボタンを下部に移動 -->
+                <div class="amount-buttons">
+                    <button class="amount-btn" value="1000">1000円</button>
+                    <button class="amount-btn" value="1200">1200円</button>
+                    <button class="amount-btn" value="1500">1500円</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="history">
+            <h2>計算履歴</h2>
+            <!-- 「履歴をクリア」ボタンを追加 -->
+            <button id="clear-history-btn">履歴をクリア</button>
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
